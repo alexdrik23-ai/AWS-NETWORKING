@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo:*)",
+      "Bash(where gh:*)",
+      "Read(//c/Users/rodri/AppData/Local/Programs/**)",
+      "Bash(git credential:*)"
+    ]
+  }
+}

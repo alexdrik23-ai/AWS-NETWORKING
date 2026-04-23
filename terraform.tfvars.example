@@ -1,0 +1,33 @@
+# ─── Copy this file to terraform.tfvars and fill in your values ─────────────
+
+aws_region   = "us-east-1"
+project_name = "aws-networking"
+environment  = "dev"
+cluster_name = "my-eks-cluster"   # Must match the EKS cluster name exactly
+
+# VPC
+vpc_cidr = "10.0.0.0/16"
+
+# Public subnets — one per AZ (used by load balancers and NAT Gateways)
+public_subnet_cidrs = [
+  "10.0.1.0/24",
+  "10.0.2.0/24",
+  "10.0.3.0/24"
+]
+
+# Private subnets — one per AZ (EKS worker nodes live here)
+private_subnet_cidrs = [
+  "10.0.11.0/24",
+  "10.0.12.0/24",
+  "10.0.13.0/24"
+]
+
+# Set to true to save cost (only 1 NAT Gateway instead of 3)
+# Set to false for full high availability
+single_nat_gateway = false
+
+# Optional extra tags
+additional_tags = {
+  Owner = "your-name"
+  Team  = "platform"
+}
