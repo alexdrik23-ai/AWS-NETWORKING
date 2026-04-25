@@ -28,6 +28,6 @@ single_nat_gateway = false
 
 # Optional extra tags
 additional_tags = {
-  Owner = "your-name"
+  Owner = "DTT-Project"
   Team  = "platform"
 }
